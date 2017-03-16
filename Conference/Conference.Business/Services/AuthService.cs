@@ -10,7 +10,7 @@ namespace Conference.Business.Services
 {
     public class AuthService
     {
-        bool IsValidUser(string Email, string HashedPassword)
+        public bool IsValidUser(string Email, string HashedPassword)
         {
             UserService userService = new UserService();
             User user = userService.GetSingleItemByID(Email);

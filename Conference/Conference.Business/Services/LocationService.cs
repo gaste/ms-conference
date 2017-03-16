@@ -1,4 +1,5 @@
 ﻿using Conference.Business.Interfaces;
+using Conference.Data.DbContext;
 using Conference.Data.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,24 +11,21 @@ namespace Conference.Business.Services
 {
     public class LocationService : IService<Location, Guid>
     {
-        //private ILocationDbContextFactory factory;
-
-            /*
+        private IConferenceDbContextFactory factory;
+                
         private LocationService() { }
-        public LocationService(ILocationDbContextFactory factory)
+        public LocationService(IConferenceDbContextFactory factory)
         {
             this.factory = factory;
         }
-        */
 
         public void Add(Location newItem)
         {
-            /*using (ILocationDbContextFactory db = factory.Create())
+            /*using (IConferenceDbContextFactory db = factory.Create())
             {
                 db.Locations.Add(newItem);
                 db.SaveChanges();
             }*/
-            throw new NotImplementedException();
         }
        
 
