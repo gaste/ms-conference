@@ -66,7 +66,7 @@ namespace Conference.Business.Services
 
         public void Update(Location changedItem)
         {
-            
+            throw new NotImplementedException();
         }
     }
 }
