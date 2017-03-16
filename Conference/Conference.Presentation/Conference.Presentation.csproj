@@ -46,14 +46,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="KonferenzDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="KonferenzDetails.Designer.cs">
+      <DependentUpon>KonferenzDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonferenzUebersicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonferenzUebersicht.Designer.cs">
+      <DependentUpon>KonferenzUebersicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonferenzVerwalten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonferenzVerwalten.Designer.cs">
+      <DependentUpon>KonferenzVerwalten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeScreen.Designer.cs">
+      <DependentUpon>WelcomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="KonferenzDetails.resx">
+      <DependentUpon>KonferenzDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonferenzUebersicht.resx">
+      <DependentUpon>KonferenzUebersicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonferenzVerwalten.resx">
+      <DependentUpon>KonferenzVerwalten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeScreen.resx">
+      <DependentUpon>WelcomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
