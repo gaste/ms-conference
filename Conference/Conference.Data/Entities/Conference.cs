@@ -7,11 +7,12 @@ namespace Conference.Data.Entities
     public class Conference
     {
         public Conference(string title, string confAbstract, DateTime startsAt, int amountOfLastingDays, User lecturer)
-            : this(title, confAbstract, startsAt, amountOfLastingDays, lecturer, Enumerable.Empty<User>())
+            : this(Guid.NewGuid(), title, confAbstract, startsAt, amountOfLastingDays, lecturer, Enumerable.Empty<User>())
         { }
 
-        public Conference(string title, string confAbstract, DateTime startsAt, int amountOfLastingDays, User lecturer, IEnumerable<User> attendees)
+        public Conference(Guid conferenceId, string title, string confAbstract, DateTime startsAt, int amountOfLastingDays, User lecturer, IEnumerable<User> attendees)
         {
+            this.ConferenceId = conferenceId;
             this.Title = title;
             this.Abstract = confAbstract;
             this.StartsAt = startsAt;
@@ -20,6 +21,7 @@ namespace Conference.Data.Entities
             this.Attendees = new List<User>(attendees);
         }
 
+        public Guid ConferenceId { get; private set; }
         public string Title { get; set; }
         public string Abstract { get; set; }
         public DateTime StartsAt { get; set; }

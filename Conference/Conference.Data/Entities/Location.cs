@@ -1,12 +1,15 @@
-﻿namespace Conference.Data.Entities
+﻿using System;
+
+namespace Conference.Data.Entities
 {
     public class Location
     {
-        public Location(string addressStreet, string addressNumber, string addressPostCode, string addressCity,
+        public Location(Guid locationId, string addressStreet, string addressNumber, string addressPostCode, string addressCity,
                         string addressCountry, decimal addressCoordinatesLongitude, decimal addressCoordinatesLatitude,
                         string roomName, int floor, decimal squareMetersOfAvailableSpace, int amountOfAvailableSeats,
                         decimal expensesPerDay, decimal cateringCostsPerSeat)
         {
+            this.LocationId = locationId;
             this.AddressStreet = addressStreet;
             this.AddressNumber = addressNumber;
             this.AddressPostCode = addressPostCode;
@@ -22,6 +25,7 @@
             this.CateringCostsPerSeat = cateringCostsPerSeat;
         }
 
+        public Guid LocationId { get; private set; }
         public string AddressStreet { get; private set; }
         public string AddressNumber { get; private set; }
         public string AddressPostCode { get; private set; }
