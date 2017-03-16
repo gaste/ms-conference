@@ -5,6 +5,8 @@ namespace Conference.Data.Entities
 {
     public class User
     {
+        private User() { }
+
         public User(string name, string firstName, string email, string hashedPassword)
             : this(name, firstName, email, hashedPassword, Enumerable.Empty<Conference>(), Enumerable.Empty<Conference>())
         { }

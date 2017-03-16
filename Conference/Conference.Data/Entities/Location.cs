@@ -4,6 +4,8 @@ namespace Conference.Data.Entities
 {
     public class Location
     {
+        private Location() { }
+
         public Location(Guid locationId, string addressStreet, string addressNumber, string addressPostCode, string addressCity,
                         string addressCountry, decimal addressCoordinatesLongitude, decimal addressCoordinatesLatitude,
                         string roomName, int floor, decimal squareMetersOfAvailableSpace, int amountOfAvailableSeats,

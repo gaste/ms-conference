@@ -35,3 +35,9 @@ using (IConferenceDbContext db = dbFactory.Create())
 * Any entities added or deleted to the `IDbSet`s will be persisted/removed when calling `SaveChanges()`.
 * Not calling `SaveChanges()` and disposing the `IConferenceDbContext` results in no changes being persisted.
 * Only use the entities in the scope of their `IConferenceDbContext`.
+
+#### Update the database schema
+To update the database schema or create the initial schema execute the following command from the Package Manager Console in Visual Studio:
+```
+Update-Database -ConnectionString "Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=Conferences; Integrated Security=True;" -ConnectionProviderName "System.Data.SqlClient"
+```
