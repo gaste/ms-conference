@@ -10,9 +10,14 @@ using System.Windows.Forms;
 
 namespace Conference.Presentation
 {
-    public partial class Form1 : Form
+    public partial class KonferenzVerwalten : Form
     {
-        public Form1()
+        public KonferenzVerwalten()
+        {
+            InitializeComponent();
+        }
+
+        public KonferenzVerwalten(string userLogin)
         {
             InitializeComponent();
         }
