@@ -6,6 +6,8 @@ namespace Conference.Data.Entities
 {
     public class Conference
     {
+        private Conference() { }
+
         public Conference(string title, string confAbstract, DateTime startsAt, int amountOfLastingDays, User lecturer)
             : this(Guid.NewGuid(), title, confAbstract, startsAt, amountOfLastingDays, lecturer, Enumerable.Empty<User>())
         { }

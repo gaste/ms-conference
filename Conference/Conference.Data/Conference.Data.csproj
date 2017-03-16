@@ -49,16 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbContext\Concrete\ConferenceDbContext.cs" />
+    <Compile Include="DbContext\Concrete\ConferenceDbContextFactory.cs" />
     <Compile Include="DbContext\IConferenceDbContext.cs" />
     <Compile Include="DbContext\IConferenceDbContextFactory.cs" />
     <Compile Include="Entities\Conference.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Migrations\201703161330588_InitialSchema.cs" />
+    <Compile Include="Migrations\201703161330588_InitialSchema.Designer.cs">
+      <DependentUpon>201703161330588_InitialSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703161330588_InitialSchema.resx">
+      <DependentUpon>201703161330588_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
