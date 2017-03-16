@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Conference.Presentation.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Conference.Presentation
 {
     public partial class User : Form
     {
-        public User()
+        private CLogin _login;
+        public User(CLogin loginData)
         {
             InitializeComponent();
+
+            _login = loginData;
         }
     }
 }

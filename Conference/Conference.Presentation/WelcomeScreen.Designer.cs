@@ -73,6 +73,7 @@
             this.txtBoxEmail.Size = new System.Drawing.Size(100, 20);
             this.txtBoxEmail.TabIndex = 3;
             this.txtBoxEmail.Text = "E-Mail";
+            this.txtBoxEmail.Leave += new System.EventHandler(this.txtBoxEmail_Leave);
             // 
             // txtBoxPwd
             // 
