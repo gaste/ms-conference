@@ -21,32 +21,52 @@ namespace Conference.Business.Services
 
         public void Add(Location newItem)
         {
-            /*using (IConferenceDbContextFactory db = factory.Create())
+            using (IConferenceDbContext db = factory.Create())
             {
                 db.Locations.Add(newItem);
                 db.SaveChanges();
-            }*/
+            }
         }
        
 
         public void Delete(Location deleteItem)
         {
-            throw new NotImplementedException();
+            using (IConferenceDbContext db = factory.Create())
+            {
+                Location location = db.Locations
+                                .Where(l => l.LocationId == deleteItem.LocationId)
+                                .FirstOrDefault();
+                db.Locations.Remove(location);
+                db.SaveChanges();
+            }
         }
 
         public IEnumerable<Location> GetItems()
         {
-            throw new NotImplementedException();
+            IEnumerable<Location> locations = null;
+            using (IConferenceDbContext db = factory.Create())
+            {
+                locations = db.Locations;
+            }
+
+            return locations;
         }
 
-        public Location GetSingleItemByID(Guid id)
+        public Location GetSingleItemByID(Guid LocationId)
         {
-            throw new NotImplementedException();
+            Location location = null;
+            using (IConferenceDbContext db = factory.Create())
+            {
+                location = db.Locations.Where(l => l.LocationId == LocationId)
+                    .FirstOrDefault();
+            }
+
+            return location;
         }
 
         public void Update(Location changedItem)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
